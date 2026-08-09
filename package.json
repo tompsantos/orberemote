@@ -1,0 +1,54 @@
+{
+  "name": "orbe-remote",
+  "version": "0.1.0-alpha.1",
+  "private": true,
+  "type": "module",
+  "description": "Secure remote operations layer for AI agents over MCP.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "orbe-remote": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "start": "node dist/cli.js",
+    "agent": "tsx src/cli.ts agent",
+    "gateway": "tsx src/cli.ts gateway",
+    "stdio": "tsx src/cli.ts stdio"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "glob": "11.0.3",
+    "ssh-config": "5.2.0",
+    "ws": "8.21.1",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.30",
+    "@types/ws": "8.18.1",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tompsantos/orberemote.git"
+  },
+  "homepage": "https://github.com/tompsantos/orberemote#readme",
+  "bugs": {
+    "url": "https://github.com/tompsantos/orberemote/issues"
+  },
+  "keywords": [
+    "mcp",
+    "ai-agents",
+    "remote-operations",
+    "ssh",
+    "devops",
+    "security",
+    "kimi",
+    "chatgpt"
+  ]
+}

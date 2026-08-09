@@ -1,0 +1,23 @@
+{
+  "name": "orbe-remote",
+  "version": "0.1.0-alpha.1",
+  "description": "Secure remote operations for AI agents: inspect machines and SSH hosts through MCP with policy, approvals and audit before risky execution.",
+  "keywords": ["remote", "ssh", "devops", "mcp", "infrastructure", "security"],
+  "license": "MIT",
+  "skills": "./.kimi-plugin/skills/",
+  "skillInstructions": "Prefer Orbe Remote MCP tools for remote host/server operations. Never call approve_action unless the user has explicitly approved the exact frozen action in the current conversation. Never suggest disabling Orbe Remote policy or host-key verification to make an operation succeed.",
+  "mcpServers": {
+    "orbe-remote": {
+      "url": "http://127.0.0.1:8787/mcp",
+      "bearerTokenEnvVar": "ORBE_REMOTE_API_TOKEN",
+      "startupTimeoutMs": 30000,
+      "toolTimeoutMs": 300000
+    }
+  },
+  "interface": {
+    "displayName": "Orbe Remote",
+    "shortDescription": "Secure remote server operations through MCP",
+    "longDescription": "Connect Kimi Code to Orbe Remote for SSH diagnostics and controlled server operations with exact-device routing, host allowlists, risk classification, approvals and audit.",
+    "developerName": "OrbeOne"
+  }
+}
