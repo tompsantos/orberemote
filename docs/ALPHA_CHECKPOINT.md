@@ -15,6 +15,7 @@
 - agent-side secondary policy check
 - audit log
 - kimi code plugin package for local development
+- github actions ci on node 22
 
 ## tested
 
@@ -32,9 +33,9 @@
 - dotenv variants
 - approval immutability/single use
 
-## not yet verified in this sandbox
+## build verification
 
-full dependency installation/build. the sandbox npm proxy did not contain `@modelcontextprotocol/sdk@1.30.0`, so the complete gateway/agent integration could not be dependency-installed here. the dependency-free policy core was transpiled and executed with node's test runner.
+the initial pull request passed github actions using the public npm registry: dependencies installed successfully, the full typescript project compiled, and the test suite completed successfully on node 22. the earlier local sandbox limitation was caused by its npm proxy not yet mirroring `@modelcontextprotocol/sdk@1.30.0`.
 
 ## next engineering slice
 
